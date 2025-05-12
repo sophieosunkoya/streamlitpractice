@@ -1,0 +1,589 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Introduction to Computer Programming</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- for Skulpt -->
+    <link rel="stylesheet" href="lib/codemirror.css">
+
+    <!-- Le styles -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="css/video_embed.css" rel="stylesheet" type="text/css">
+    <link href="css/custom.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="ico/favicon.png">
+
+    <!-- handle persistant sidebar visibility for submodules, keywords and glossary -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scrolling.js"></script>
+
+    <!-- activecode units - hide them once the page loads (to allow the activecode text editors to render) -->
+    <script type="text/javascript">
+    	$(document).ready(function() {
+
+	    	// iterate over all activecode text editors
+	    	$(".tab-pane").each(function() {
+	    		if (!$(this).hasClass("activecodefirst"))
+	    		{
+			    	$(this).removeClass("active");
+	    		}
+	    	});
+    	});
+
+
+    </script>
+
+  </head>
+
+  <body>
+
+    <div id="thenavbar" class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="brand" href="index.php"><h1>Introduction to Computer Programming</h1></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div id="thesidebar" class="span4">
+
+          <div class="well sidebar-nav" id="leftmenu_cs">
+	           <nav aria-label="Commons Syllabus Menu">
+                <ul class="nav nav-list">
+                  <li class="nav-header">Course Information</li>
+                  <li><a href="common_syllabus.php">Common Course Syllabus</a></li>
+<li><a href="tutoring.php">Tutoring Schedule</a></li>
+                </ul>
+             </nav>
+          </div>
+
+          <div class="well sidebar-nav" id="leftmenu">
+	        <!-- 2016-09-21 -->
+	        <nav aria-label="Module Menu">
+            <ul class="nav nav-list">
+                <li class="nav-header">Self-Paced Learning Modules</li>
+<li><a href="module01.php">Module #1 (Variables, Statements, etc.)</a></li>
+<li><a href="module02.php">Module #2 (Types, Operators, Debugging)</a></li>
+<li><a href="module03.php">Module #3 (Boolean Logic, Using Modules)</a></li>
+<li><a href="module04.php">Module #4 (While Loops)</a></li>
+<li><a href="module05.php">Module #5 (For Loops, Nested Loops)</a></li>
+<li><a href="module06.php">Module #6 (Functions)</a></li>
+<li><a href="module07.php">Module #7 (Strings, Sequences, Slicing)</a></li>
+<li><a href="module08.php">Module #8 (Lists)</a></li>
+<li><a href="module09.php">Module #9 (Exceptions, Input/Output)</a></li>
+<li><a href="module10.php">Module #10 (Dictionaries)</a></li>
+<li><a href="module11.php">Module #11 (Introduction to Object Oriented Programming)</a></li>
+            </ul>
+            </nav>
+          </div><!--/.well -->
+          <div id="submodulesidebar" class="well sidebar-nav">
+	        <!-- 2016-09-21 -->
+	        <nav aria-label="Submodule Menu">
+            <ul class="nav nav-list">
+
+              <!-- SUBMODULES -->
+              <li class="nav-header">Submodules</li><li><a href='#common_syllabus_topics'>Topics</a></li><li><a href='#common_syllabus_books'>Books</a></li><li><a href='#common_syllabus_software'>Software</a></li><li><a href='#common_syllabus_grading'>Grading</a></li><li><a href='#common_syllabus_sections'>Course Sections</a></li><li><a href='#common_syllabus_departmentlinks'>CS Department Links</a></li><li><a href='#common_syllabus_tutoring'>Tutoring Resources</a></li>
+              <!-- KEYWORDS -->
+                            </li>
+            </ul>
+            </nav>
+          </div><!--/.well -->
+        </div><!--/span-->
+        <div class="span8">
+          <div class="row-fluid">
+            <div class="span12">
+              <h2>Common Course Syllabus (Fall 2022)</h2>
+
+              <ul>
+                <li><a href='#common_syllabus_topics'>Topics</a></li><li><a href='#common_syllabus_books'>Books</a></li><li><a href='#common_syllabus_software'>Software</a></li><li><a href='#common_syllabus_grading'>Grading</a></li><li><a href='#common_syllabus_sections'>Course Sections</a></li><li><a href='#common_syllabus_departmentlinks'>CS Department Links</a></li><li><a href='#common_syllabus_tutoring'>Tutoring Resources</a></li>              </ul>
+              <p></p>
+                <a name='common_syllabus_topics'></a><hr>
+<h3>Topics</h3>
+  <ul>
+    <li>Introduction to Programming Languages</li>
+    <li>Python Basics</li>
+    <li>Working with variables and operations</li>
+    <li>Control Structures</li>
+    <li>Repetition Structures</li>
+    <li>Working with Text</li>
+    <li>Functions and Modules</li>
+    <li>Lists</li>
+    <li>File Input & Output</li>
+    <li>Dictionaries</li>
+    <li>Introduction to Object Oriented Programming</li>
+    <li>Additional topics, such as graphics, may be covered at the instructor's discretion and time-permitting.</li>
+  </ul>
+<a name='common_syllabus_books'></a><hr>
+<h3>Books</h3>
+
+<p class="bg-info">All textbook resources are OPTIONAL.  Reserved copies are available for use in Bobst Library at the Reserves Desk, two floors down from the main lobby.</p>
+
+<article>
+
+<pre>Starting Out with Python (5th Edition) *
+by Tony Gaddis
+ISBN-13: 9780136912330</pre>
+
+<p><strong>* Note: Older editions of this textbook, including the 2nd edition, may be used instead of the most recent edition. Also note that online resources such as MyProgrammingLab are NOT required.  You may choose to purchase access to this service if you wish, but please check with your instructor first.</strong></p>
+
+    Free online:
+<pre><a href="http://openbookproject.net/thinkcs/python/english3e/" target="_blank">How to Think Like a Computer Scientist: Learning with Python 3</a>
+Version date: October 2012
+by Peter Wentworth, Jeffrey Elkner, Allen B. Downey, and Chris Meyers</pre>
+
+<pre><a href="https://www.py4e.com/html3/01-intro" target="_blank">Python for Everybody: Exploring Data Using Python 3</a>
+Version date: 2016
+by Charles Severance</pre>
+
+      Companion Website to accompany Starting Out with Python, Third Edition by Tony Gaddis:
+<pre><a href="http://wps.pearsoned.com/ecs_gaddis_sowpython_3/" target="_blank">http://wps.pearsoned.com/ecs_gaddis_sowpython_3/</a></pre>
+
+MyProgrammingLab Online Tutorial Site:
+<pre><a href="http://www.myprogramminglab.com" target="_blank">http://www.myprogramminglab.com</a>
+If you wish to use this resource you may purchase it along with the "Starting out with Python" textbook from
+the NYU bookstore.  You can also purchase access to this site directly by visiting www.myprogramminglab.com
+and registering as a "student" - just follow the prompts and make sure to purchase access for the
+"Starting out with Python" programming lab. <strong>This resource is not required.</strong></pre>
+
+  </article>
+<a name='common_syllabus_software'></a><hr>
+<h3>Software</h3>
+<p><a href="https://www.python.org/getit/" target="_blank">Python 3.x and IDLE (Integrated Development Environment)</a></p>
+<p><a href="https://repl.it/languages/python3" target="_blank">repl.it</a>: A web-based Python 3 IDE</p>
+<p><a href="http://www.nyu.edu/life/resources-and-services/information-technology/getting-started/software.html" target="_blank">ITS On-campus Software Resources</a></p>
+<p><a href="https://www.nyu.edu/life/resources-and-services/information-technology/locations-and-facilities/student-technology-centers.html" target="_blank">NYU On-campus Computer Labs</a> and <a href="https://www.nyu.edu/life/resources-and-services/information-technology/getting-started/software/software-at-nyu-it-locations.html" target="_blank">Available software packages at each computer lab location</a></p>
+<p><a href="https://www.nyu.edu/life/information-technology/help-and-service-status/desktop-and-laptop-support.html" target="_blank">NYU Desktop & Laptop Support</a>: If you encounter a systemwide hardware or software failure you can get support from NYU IT (fee-based service)</p>
+<p><a href="https://library.nyu.edu/services/computing/on-campus/laptop-loans/" target="_blank">NYU Bobst Library Equipment Loaner Program</a></p>
+<a name='common_syllabus_grading'></a><hr>
+<h3>Grading</h3>
+<p class="bg-info">If you plan to continue with Computer Science courses, you must receive a grade of C or better in this course.</p>
+
+<p>Your grade in this course will be determined based on the items below.  Note that the following rubric serves as a guideline for how grades will be calculated. The final percentage allotted to each category is at the instructor’s discretion.</p>
+<ul>
+  <li>Assignments: 30%</li>
+  <li>Weekly Quizzes & Participation: 10%</li>
+  <li>Midterm Exam: 30%</li>
+  <li>Final Exam: 30%</li>
+</ul>
+<a name='common_syllabus_sections'></a><hr>
+<h3>Course Sections</h3>
+
+<table class="table table-striped table-hover">
+<tbody><tr>
+<th>Course #</th>
+<th>Class #</th>
+<th>Name</th>
+<th>Instructor</th>
+<th>Days</th>
+<th>Time</th>
+<th>Room</th>
+<th>Tutors</th>
+</tr>
+
+
+<tr class="alt">
+<td valign="top">
+<a href="https://cs.nyu.edu/courses/fall22/CSCI-UA.0002-001/">CSCI-UA.0002-001</a>
+
+</td>
+<td valign="top">7441</td>
+<td valign="top">
+Intro To Computer Programming
+(No Prior Experience)</td>
+<td valign="top">
+Amanda Steigman</td>
+<td valign="top">MW</td>
+<td valign="top">8:00AM - 9:15AM</td>
+<td valign="top">12WP L120&nbsp;&nbsp;</td>
+<td valign="top"><ul>
+<li>Catie</li>
+<li>TBA</li>
+</ul></td>
+</tr>
+
+
+<tr class="alt">
+<td valign="top">
+<a href="https://cs.nyu.edu/courses/fall22/CSCI-UA.0002-002/">CSCI-UA.0002-002</a>
+
+</td>
+<td valign="top">7442</td>
+<td valign="top">
+Intro To Computer Programming
+(No Prior Experience)</td>
+<td valign="top">
+Susan Liao&nbsp;</td>
+<td valign="top">TR</td>
+<td valign="top">8:00AM - 9:15AM</td>
+<td valign="top">12WP L120</td>
+<td valign="top"><ul>
+<li>Ethan</li>
+<li>Tomisin</li>
+</ul></td>
+</tr>
+
+
+
+<tr class="alt">
+<td valign="top">
+<a href="https://cs.nyu.edu/courses/fall22/CSCI-UA.0002-003/">CSCI-UA.0002-003</a>
+</td>
+<td valign="top">7443</td>
+<td valign="top">
+Intro To Computer Programming
+(No Prior Experience)</td>
+<td valign="top">
+Craig Kapp</td>
+<td valign="top">MW</td>
+<td valign="top">9:30AM - 10:45AM</td>
+<td valign="top">Meyr 121</td>
+<td valign="top"><ul>
+<li>Bobby</li>
+<li>Catie</li>
+<li>Christine</li>
+<li>Mateus</li>
+<li>Nehal</li>
+<li>TBA</li>
+</ul></td>
+</tr>
+
+
+<tr class="">
+<td valign="top">
+<a href="https://cs.nyu.edu/courses/fall22/CSCI-UA.0002-004/">CSCI-UA.0002-004</a>
+</td>
+<td valign="top">9116</td>
+<td valign="top">
+Intro To Computer Programming
+(No Prior Experience)</td>
+<td valign="top">Julie Lizardo</td>
+<td valign="top">TR</td>
+<td valign="top">9:30AM - 10:45AM</td>
+<td valign="top">Bobst LL138</td>
+<td valign="top"><ul>
+<li>Hanna</li>
+<li>Rita</li>
+</ul></td>
+</tr>
+
+<tr class="">
+<td valign="top">
+<a href="https://cs.nyu.edu/courses/fall22/CSCI-UA.0002-005/">CSCI-UA.0002-005</a>
+</td>
+<td valign="top">7444</td>
+<td valign="top">
+Intro To Computer Programming
+(No Prior Experience)</td>
+<td valign="top">Zoe Robert</td>
+<td valign="top">MW</td>
+<td valign="top">11:00AM - 12:15PM</td>
+<td valign="top">19W4 C-20</td>
+<td valign="top"><ul>
+<li>Mateus</li>
+<li>Shannon</li>
+</ul></td>
+</tr>
+
+<tr class="alt">
+<td valign="top">
+<a href="https://cs.nyu.edu/courses/fall22/CSCI-UA.0002-006/">CSCI-UA.0002-006</a>
+</td>
+<td valign="top">7445</td>
+<td valign="top">
+Intro To Computer Programming
+(No Prior Experience)</td>
+<td valign="top">David Prager</td>
+<td valign="top">MW&nbsp;</td>
+<td valign="top"> 12:30PM - 1:45PM</td>
+<td valign="top">Kimmel 803</td>
+<td valign="top"><ul>
+<li>Boyuan</li>
+<li>Manjiri</li>
+</ul></td>
+</tr>
+
+<tr class="">
+<td valign="top">
+<a href="https://cs.nyu.edu/courses/fall22/CSCI-UA.0002-007/">CSCI-UA.0002-007</a>
+</td>
+<td valign="top">7446</td>
+<td valign="top">
+Intro To Computer Programming
+(No Prior Experience)</td>
+<td valign="top">Julie Lizardo</td>
+<td valign="top">TR&nbsp;</td>
+<td valign="top"><span class="alt">12:30PM - 1:45PM</span></td>
+<td valign="top">Bobst LL138</td>
+<td valign="top"><ul>
+<li>Manjiri</li>
+<li>Tomisin</li>
+</ul></td>
+</tr>
+
+
+
+<tr class="">
+<td valign="top">
+<a href="https://cs.nyu.edu/courses/fall22/CSCI-UA.0002-008/">CSCI-UA.0002-008</a>
+</td>
+<td valign="top">8556</td>
+<td valign="top">
+Intro To Computer Programming
+(No Prior Experience)</td>
+<td valign="top">
+Matthew Zeidenberg</td>
+<td valign="top">TR</td>
+<td valign="top" class="alt">2:00PM - 3:15PM</td>
+<td valign="top" class="alt">ONLINE</td>
+<td valign="top" class="alt"><ul>
+<li>Bobby</li>
+<li>Christine</li>
+<li>Shannon</li>
+<li>Rachel</li>
+</ul></td>
+</tr>
+
+<tr class="alt">
+<td valign="top">
+<a href="https://cs.nyu.edu/courses/fall22/CSCI-UA.0002-009/">CSCI-UA.0002-009</a>
+</td>
+<td valign="top">8558</td>
+<td valign="top">
+Intro To Computer Programming
+(No Prior Experience)</td>
+<td valign="top">Joshua Clayton</td>
+<td valign="top">MW</td>
+<td valign="top">3:30PM - 4:45PM</td>
+<td valign="top">ONLINE</td>
+<td valign="top"><ul>
+<li>Charles</li>
+<li>Chen</li>
+<li>Hanna</li>
+<li>Rachel</li>
+</ul></td>
+</tr>
+
+
+
+
+<tr class="alt">
+<td valign="top">
+<a href="https://cs.nyu.edu/courses/fall22/CSCI-UA.0002-010/">CSCI-UA.0002-010</a>
+</td>
+<td valign="top">8730</td>
+<td valign="top">
+Intro To Computer Programming
+(No Prior Experience)</td>
+<td valign="top">Khye Borg Liew&nbsp;</td>
+<td valign="top">TR</td>
+<td valign="top">3:30PM - 4:45PM</td>
+<td valign="top">ONLINE</td>
+<td valign="top"><ul>
+<li>Boyuan</li>
+<li>Sabrina</li>
+</ul></td>
+</tr>
+
+
+<tr class="alt">
+<td valign="top">
+<a href="https://cs.nyu.edu/courses/fall22/CSCI-UA.0002-011/">CSCI-UA.0002-011</a>
+</td>
+<td valign="top">9559</td>
+<td valign="top">
+Intro To Computer Programming
+(No Prior Experience)</td>
+<td valign="top">Emily Zhao</td>
+<td valign="top">TR</td>
+<td valign="top">4:55PM - 6:10PM</td>
+<td valign="top">GCASL 361</td>
+<td valign="top"><ul>
+<li>Nehal</li>
+<li>Rita</li>
+</ul></td>
+</tr>
+
+
+<tr class="alt">
+<td valign="top"><a href="https://cs.nyu.edu/courses/fall22/CSCI-UA.0002-012/">CSCI-UA.0002-012</a></td>
+<td valign="top">8882</td>
+<td valign="top"> Intro To Computer Programming (No Prior Experience)</td>
+<td valign="top">Michell Cardona&nbsp;&nbsp;</td>
+<td valign="top">TR</td>
+<td valign="top">6:20PM - 7:35PM</td>
+<td valign="top">Tisch LC11&nbsp; &nbsp;</td>
+<td valign="top"><ul>
+<li>Amelia</li>
+<li>Mateus</li>
+</ul></td>
+</tr>
+
+
+<tr class="alt">
+<td valign="top"><a href="https://cs.nyu.edu/courses/fall22/CSCI-UA.0002-012/">CSCI-UA.0002-013</a></td>
+<td valign="top">25468</td>
+<td valign="top"> Intro To Computer Programming (No Prior Experience)</td>
+<td valign="top">Mihir Patil</td>
+<td valign="top">MW</td>
+<td valign="top">9:30AM - 10:45AM</td>
+<td valign="top">CIWW 317</td>
+<td valign="top"><ul>
+<li>Ethan</li>
+<li>Kevin</li>
+</ul></td>
+</tr>
+
+
+
+<tr class="alt">
+<td valign="top"><a href="https://cs.nyu.edu/courses/fall22/CSCI-UA.0003-001/">CSCI-UA.0003-001</a></td>
+<td valign="top">9289</td>
+<td valign="top"> Intro To Computer Programming (Limited Prior Experience)</td>
+<td valign="top">Mauricio Arias Hernandez</td>
+<td valign="top">TR</td>
+<td valign="top">11:00AM - 12:15PM</td>
+<td valign="top">ONLINE</td>
+<td valign="top"><ul>
+<li>Please check with instructor</li>
+</ul></td>
+</tr>
+
+
+
+</tbody></table>
+<a name='common_syllabus_departmentlinks'></a><hr>
+<h3>CS Department Links</h3>
+<ul>
+  <li><a href="http://cs.nyu.edu/csweb/index.html">Computer Science Department</a></li>
+  <li><a href="http://www.cs.nyu.edu/~acmweb/">ACM Chapter </a></li>
+  <li><a href="http://www.cs.nyu.edu/~wincweb/">WinC (Women in Computing)</a></li>
+  <li><a href="http://www.nyu.edu/registrar/calendars/university-academic-calendar.html#1158">CAS Academic Calendar</a></li>
+  <li><a href="http://www.cs.nyu.edu/web/Academic/Undergrad/academic_integrity.html">Computer Science Department's Statement on Academic Integrity</a></li>
+<li><a href="http://www.nyu.edu/registrar/registration/final-exam-schedules.html">Final Exam Schedules</a></li>
+</ul>
+<a name='common_syllabus_tutoring'></a><hr>
+<h3>Tutoring Resources</h3>
+
+<h4>Online Drop-in Tutoring</h4>
+
+<p>This semester we will be offering online drop-in tutoring through Zoom <strong>starting on Monday September 12th, 2022</strong>.  There is no appointment necessary to use online drop-in tutoring, and you may visit any tutor you wish — you are not restricted to the tutors assigned to your course. Tutoring ends on the last day of classes (<strong>Monday December 14th, 2022</strong>)</p>
+
+<!--
+<div class="alert alert-info">The tutoring schedule will be posted during the first week of classes along with directions on how to access tutoring using Zoom.</div>
+-->
+
+<p>The tutoring schedule can be seen in the Google calendar below.  To access online drop-in tutoring please click the "Connect to Online Drop-in Tutoring" button below. <strong>Please ensure that you are logged into your NYU Google and NYU Zoom accounts - non NYU accounts will be unable to access this service!</strong></p>
+
+<ul>
+<li><a href="https://nyu.zoom.us/download" target="_blank">Download and install the latest version of Zoom on your computer</a>. We strongly recommend using a laptop or desktop when accessing online drop-in tutoring.</li>
+<li>Launch Zoom on your computer.</li>
+<li>If you are not logged into Zoom you will be prompted to do so.  You can log into your Zoom account by doing the following:
+<ul>
+<li>Select "Sign in with SSO"</li>
+<li>Type "nyu" and click continue</li>
+<li>You will be redirected to the Zoom web client, which may prompt you to
+log in using your Net ID</li>
+<li>Finally you will be redirected back to Zoom and will be logged into
+your NYU account</li>
+</ul>
+</li>
+<li>If you are already logged into Zoom and you want to ensure that you are logged into the correct account you can do the following:
+<ul>
+<li>Click on your profile image (top-right) and select "sign
+out"</li>
+<li>Select "Sign in with SSO"</li>
+<li>Type "nyu" and click continue</li>
+<li>You will be redirected to the Zoom web client, which may prompt you to
+log in using your Net ID</li>
+<li>Finally you will be redirected back to Zoom and will be logged into
+your NYU account</li>
+</ul>
+</li>
+</ul>
+
+<p class="alert alert-danger">The calendar below uses Eastern time (EDT) but it should adjust to your local time depending on your Google calendar settings.  In addition, if you have had this page open for a long period of time please "refresh" it - the tutoring calendar is subject to change.</p>
+
+<iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FNew_York&title=Fall%202022%20CSCI-UA.0002%20Tutoring&mode=WEEK&src=Y19jbGRpMTYzOGM3b3ZzM2w4MmNkYjlpcjRqb0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%237986CB" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+
+<!--
+<a href="https://docs.google.com/forms/d/e/1FAIpQLScvo-LMzNrFUGym1AnekGOs4CROo82weWOcMvx8Y9YpL9CD5w/viewform" target="_blank"><button id="onlinedropin" class="btn btn-info" style="width: 100%; margin-bottom: 10px; font-size: 150%;">Click Here to Connect to Online Drop-in Tutoring (beginning on Monday 1/31/2022)</button></a>
+-->
+
+<button id="onlinedropin" class="btn btn-warning" style="width: 100%; margin-bottom: 10px; font-size: 150%;">Connect to Online Drop-in Tutoring (will become active on Monday 9/12/2022)</button>
+
+<p class="alert alert-danger">If you encounter any tutoring issues (i.e. a tutor does not show up for a scheduled shift) please let us know by filling out the "<a href="https://docs.google.com/a/nyu.edu/forms/d/e/1FAIpQLSdbBJdZGClLRgkr6tC1FeHVhLHEO58-B6ZtVtIw3bQn308rTw/viewform" target="_blank">Report a Tutoring Issue</a>" form.</p>
+
+  <h4 id="lab-tutors">Asynchronous Tutoring</h4>
+
+<p>Asynchronous tutoring will begin <strong>on Monday September 12th, 2022</strong></p>
+
+<p>You may also get in touch with our tutoring team by using an online forum.  Questions asked in this way will not be answered immediately, but response time should be fairly quick.</p>
+
+<p>To do this we will be using an online discussion tool named "Ed" which is designed to make it easy to have conversations around code.  Using Ed you will be able to ask the course tutors or your fellow students questions about course content and homework assignments.  For example, let's say you're having trouble understanding how to convert user input from a String to an Integer.  You can create a new thread on our Ed discussion forum with your question - including a live code snippet - and members of the class can respond and provide helpful hints to get you started.</p>
+
+<p>This is a completely optional service designed to supplement live 1:1 tutoring.  However, we encourage you to use the system since we find that we answer the same questions over and over via e-mail -- this will allow us to centralize answers to questions that can benefit all students in the class.</p>
+
+<!--
+<div class="alert alert-info">Directions on how to access the Ed forum will be posted during the first week of classes.</div>
+-->
+
+<p>To join this Ed discussion forum simply visit this link and register with your NYU E-mail address: <a href="https://edstem.org/us/join/ksq9qR" target="_blank">https://edstem.org/us/join/ksq9qR</a></p>
+
+<p>Once you've registered please check out the "Welcome and Frequently Asked Questions" thread - we've posted some "ground rules" here on what should and should not be posted to Ed (i.e. don't post full solutions to your homework assignments!)</p>
+
+<p>When you're ready to ask a question simply click the "New Thread" button and select the category for your question (i.e. Assignment #2, Module #3, etc).  Then type your question in the box provided, using the "code" button ("<>") to add in live Python3 code to your thread.</p>
+
+
+
+
+
+<h3>Tutor Directory</h3>
+
+<p>Tutoring staff assignments will be posted at the beginning of the Fall 2022 semester.</p>
+
+<!--
+<iframe src="https://docs.google.com/document/d/e/2PACX-1vTUbU0_ZmouKKLvoTtpGCYymHjsd81b12jjTD-Nej64GVmogOJ167yLFbsmV_qB1xSrU8G3ZOi61pPk/pub?embedded=true" style="width: 100%; height: 2400px; border: 0px; overflow: hidden;" scrolling="no"></iframe>
+-->
+
+
+
+            </div><!--/span-->
+          </div><!--/row-->
+        </div><!--/span-->
+      </div><!--/row-->
+
+    </div><!--/.fluid-container-->
+
+    <hr>
+    <center><a href="copyright.php">Copyright 2014-2022</a></center>
+
+
+    <!-- For Skulpt & CodeMirror -->
+    <script src="js/skulpt.min.js" type="text/javascript"></script>
+    <script src="js/skulpt-stdlib.js" type="text/javascript"></script>
+    <script src="lib/codemirror.js"></script>
+    <script src="mode/python/python.js"></script>
+    <script src="addon/selection/active-line.js"></script>
+    <script src="addon/edit/matchbrackets.js"></script>
+    <script src="js/skulpt-custom.js"></script>
+    <script src="js/analytics.js"></script>
+  </body>
+</html>
